@@ -1,96 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abidur Rahman | Social Links</title>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Social Hub</title>
 <style>
-:root{--bg:#07101f;--card:rgba(19,34,58,.78);--text:#f4f7ff;--muted:#b9c6dd;--line:rgba(137,168,224,.28);--accent:#35b7ff;--accent2:#8458ff}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 80% 15%,#183c80 0,transparent 36%),radial-gradient(ellipse at 10% 85%,#182d65 0,transparent 35%),linear-gradient(145deg,#050b17,#08162b 60%,#060b17)}
-header{display:flex;align-items:center;justify-content:space-between;padding:18px clamp(18px,5vw,70px);border-bottom:1px solid var(--line);background:rgba(4,10,20,.7);backdrop-filter:blur(14px);position:sticky;top:0;z-index:5}
-.brand{display:flex;align-items:center;gap:14px;font-weight:800;font-size:clamp(17px,2vw,24px)}
-.logo{font-size:29px;font-weight:900;letter-spacing:-4px;color:#49baff;text-shadow:0 0 20px #168aff;margin-right:8px}
-.tagline{font-size:14px;color:var(--muted);font-weight:400;border-left:1px solid var(--line);padding-left:18px}
-.theme{border:1px solid var(--line);background:var(--card);color:var(--text);padding:10px 14px;border-radius:30px;cursor:pointer}
-main{max-width:1180px;margin:auto;padding:42px 22px 24px}
-.hero{display:grid;grid-template-columns:250px 1fr;gap:35px;align-items:center;min-height:340px;position:relative}
-.avatar{width:220px;height:220px;border-radius:50%;border:4px solid #4abaff;box-shadow:0 0 35px #0878ff66;display:grid;place-items:center;background:linear-gradient(135deg,#173968,#101d3c);font-size:76px;margin:auto;animation:float 5s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-8px)}}
-h1{font-size:clamp(34px,5vw,58px);margin:0 0 8px;letter-spacing:-1.5px}
-.subtitle{font-size:clamp(17px,2vw,24px);color:#75d2ff;margin:0 0 18px}
-.rule{width:260px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2),transparent);margin-bottom:20px}
-.intro{font-size:17px;line-height:1.7;color:#e4ebfa;max-width:600px}
-.meta{display:inline-flex;gap:16px;flex-wrap:wrap;margin-top:12px;color:var(--muted);border:1px solid var(--line);border-radius:30px;padding:10px 16px;font-size:14px}
-section{margin-top:45px}
-.section-title{display:flex;align-items:center;gap:20px;justify-content:center;margin-bottom:24px;font-size:30px}
-.section-title:before,.section-title:after{content:"";height:2px;flex:1;max-width:210px;background:linear-gradient(90deg,transparent,var(--accent),var(--accent2))}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
-.social{--color:#249bff;display:flex;align-items:center;gap:15px;text-decoration:none;color:var(--text);padding:16px 18px;border:1px solid var(--line);border-radius:19px;background:linear-gradient(120deg,var(--card),rgba(20,34,57,.45));transition:transform .25s,border-color .25s,box-shadow .25s;min-width:0}
-.social:hover{transform:translateY(-5px);border-color:var(--color);box-shadow:0 12px 28px #0003,0 0 18px color-mix(in srgb,var(--color) 22%,transparent)}
-.icon{width:48px;height:48px;flex:0 0 48px;border-radius:50%;display:grid;place-items:center;background:var(--color);color:white;font-size:23px;font-weight:800}
-.info{min-width:0;flex:1}
-.info strong{display:block;font-size:17px;margin-bottom:4px}
-.info span{display:block;color:var(--muted);font-size:13px}
-.arrow{font-size:25px;color:var(--color);transition:transform .2s}
-.social:hover .arrow{transform:translateX(4px)}
-.quote{text-align:center;margin:44px 0 24px;font-family:Georgia,serif;font-style:italic;font-size:clamp(20px,3vw,29px);color:#dbe7ff}
-.footer{text-align:center;color:var(--muted);font-size:14px;padding:18px 0 28px}
-.footer .icons{display:flex;gap:18px;justify-content:center;margin:18px 0 28px}
-.footer a{color:#b5c8ec;text-decoration:none;font-weight:700}
-footer .heart{color:#ff5b75}
-.light{--bg:#edf4ff;--card:rgba(255,255,255,.82);--text:#111d32;--muted:#52617a;--line:rgba(40,72,120,.2)}
-.light .intro{color:#2c3d57}
-.light header{background:rgba(240,246,255,.8)}
-.light body{color:var(--text)}
-@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:190px 1fr;gap:24px}.avatar{width:170px;height:170px;font-size:60px}}
-@media(max-width:570px){header{padding:14px 16px}.tagline{display:none}main{padding:28px 15px}.hero{grid-template-columns:1fr;text-align:center;gap:20px}.avatar{width:155px;height:155px}.rule{margin:0 auto 17px}.meta{justify-content:center}.grid{grid-template-columns:1fr}.section-title{font-size:25px}.social{padding:14px}.intro{font-size:16px}}
-</style>
-</head>
-<body>
-<header>
-  <div class="brand"><span class="logo">AR</span><span>Abidur Rahman</span><span class="tagline">Connect · Follow · Explore</span></div>
-  <button class="theme" id="themeBtn" aria-label="Toggle theme">☀️ / 🌙</button>
-</header>
-<main>
-  <div class="hero">
-    <div class="avatar" aria-label="Profile avatar">AR</div>
-    <div>
-      <h1>Abidur Rahman</h1>
-      <p class="subtitle">Student&nbsp; | &nbsp;Dreamer&nbsp; | &nbsp;Lifelong Learner</p>
-      <div class="rule"></div>
-      <p class="intro">Assalamu Alaikum! 👋<br>Welcome to my personal hub. Here you can find all my social media links, connect with me, and explore more about me.</p>
-      <div class="meta"><span>📍 Dhaka, Bangladesh</span><span>🎓 Darunnazat Madrasa</span></div>
-    </div>
-  </div>
-
-  <section>
-    <h2 class="section-title">My Social Media</h2>
-    <div class="grid">
-      <!-- Replace each # with your actual profile link -->
-      <a class="social" style="--color:#1877f2" href="" target="_blank" rel="noopener"><span class="icon">f</span><span class="info"><strong>Facebook</strong><span>Follow me on Facebook</span></span><span class="arrow">›</span></a>
-      <a class="social" style="--color:#0a66c2" href="https://www.linkedin.com/in/abid-adnan-094597446/" target="_blank" rel="noopener"><span class="icon">in</span><span class="info"><strong>LinkedIn</strong><span>Connect professionally</span></span><span class="arrow">›</span></a>
-      <a class="social" style="--color:#229ed9" href="#" target="_blank" rel="noopener"><span class="icon">➤</span><span class="info"><strong>Telegram</strong><span>Join my channel</span></span><span class="arrow">›</span></a>
-      <a class="social" style="--color:#e1306c" href="#" target="_blank" rel="noopener"><span class="icon">◎</span><span class="info"><strong>Instagram</strong><span>Photos, reels & stories</span></span><span class="arrow">›</span></a>
-      <a class="social" style="--color:#111111" href="#" target="_blank" rel="noopener"><span class="icon">𝕏</span><span class="info"><strong>X (Twitter)</strong><span>Follow for updates</span></span><span class="arrow">›</span></a>
-      <a class="social" style="--color:#20c66a" href="#" target="_blank" rel="noopener"><span class="icon">◉</span><span class="info"><strong>WhatsApp</strong><span>Chat with me</span></span><span class="arrow">›</span></a>
-      <a class="social" style="--color:#ff0033" href="#" target="_blank" rel="noopener"><span class="icon">▶</span><span class="info"><strong>YouTube</strong><span>Watch my videos</span></span><span class="arrow">›</span></a>
-      <a class="social" style="--color:#7c5cff" href="#" target="_blank" rel="noopener"><span class="icon">⌘</span><span class="info"><strong>GitHub</strong><span>Explore my projects</span></span><span class="arrow">›</span></a>
-      <a class="social" style="--color:#e7a51a" href="mailto:your-email@example.com"><span class="icon">✉</span><span class="info"><strong>Email</strong><span>Send me a message</span></span><span class="arrow">›</span></a>
-      <a class="social" style="--color:#9146ff" href="#" target="_blank" rel="noopener"><span class="icon">♪</span><span class="info"><strong>TikTok</strong><span>Short videos & updates</span></span><span class="arrow">›</span></a>
-    </div>
-  </section>
-  <div class="quote">“Dream Big, Work Hard, Make It Happen.”</div>
-  <div class="footer">
-    <div class="icons"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a><a href="#">➤</a></div>
-    <footer>Made with <span class="heart">♥</span> by Abidur Rahman</footer>
-  </div>
-</main>
+:root{--bg:#07101f;--panel:#14243c;--text:#f4f7ff;--muted:#b9c6dd;--line:#344b6b;--accent:#38bdf8}
+*{box-sizing:border-box}body{margin:0;color:var(--text);font:16px Segoe UI,Arial;background:radial-gradient(ellipse at 80% 0,#183d7b,transparent 38%),linear-gradient(145deg,#050b17,#08162b 60%,#060b17);min-height:100vh}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 5%;border-bottom:1px solid #344b6b;background:#050b17cc;position:sticky;top:0}
+button{cursor:pointer;color:var(--text);background:#142640;border:1px solid #344b6b;border-radius:11px;padding:10px 14px;font:inherit}button.primary{background:linear-gradient(120deg,#087fce,#7048dd);border:0;font-weight:bold}
+.brand{font-weight:800;font-size:20px}.brand b{color:#49baff;margin-right:12px}
+main{max-width:1100px;margin:auto;padding:34px 20px}.hero{display:grid;grid-template-columns:190px 1fr;gap:28px;align-items:center}
+.avatar{width:165px;height:165px;border-radius:50%;border:4px solid #49baff;box-shadow:0 0 32px #0878ff55;background:linear-gradient(135deg,#183968,#101d3c);display:grid;place-items:center;font-size:55px;font-weight:bold;margin:auto;overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover}
+h1{font-size:clamp(32px,5vw,54px);margin:0 0 8px}.subtitle{color:#75d2ff;font-size:22px;margin:0 0 16px}.intro{white-space:pre-wrap;line-height:1.65}.meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);margin-top:14px}.meta span{border:1px solid #344b6b;border-radius:30px;padding:9px 14px}
+section{margin-top:38px}.section-title{text-align:center;font-size:29px;margin-bottom:22px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.social{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--text);padding:15px;border:1px solid #344b6b;border-radius:17px;background:#13243dcc;transition:.2s;min-width:0}.social:hover{transform:translateY(-4px);border-color:var(--color)}
+.icon{width:46px;height:46px;flex:0 0 46px;border-radius:50%;display:grid;place-items:center;background:var(--color);color:white;font-size:22px;font-weight:800}.info{min-width:0;flex:1}.info strong{display:block;margin-bottom:4px}.info span{display:block;color:var(--muted);font-size:13px}.arrow{font-size:25px;color:var(--color)}
+.quote{text-align:center;margin:42px 0 20px;font:italic clamp(20px,3vw,28px) Georgia,serif}.footer{text-align:center;color:var(--muted);padding:16px 0 28px}
+.overlay{display:none;position:fixed;inset:0;background:#0009;backdrop-filter:blur(5px);z-index:10;overflow:auto;padding:18px}.overlay.open{display:block}
+.settings{max-width:760px;margin:20px auto;background:#0d1a2d;border:1px solid #334a6c;border-radius:20px;padding:22px}.settingshead,.linkshead,.settingsfoot{display:flex;align-items:center;justify-content:space-between;gap:12px}.settingshead h2{margin:0 0 16px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:13px;color:#c6d4e9;font-weight:600}
+input,textarea{width:100%;font:inherit;color:#f4f7ff;background:#071120;border:1px solid #344b6b;border-radius:10px;padding:11px}textarea{min-height:85px;resize:vertical}
+.linkeditor{display:grid;grid-template-columns:1fr 1.5fr 1.4fr auto;gap:8px;margin:9px 0}.linkeditor input{min-width:0}.linkeditor button{color:#ffb5bf}
+.linkshead{margin:22px 0 10px}.settingsfoot{margin-top:20px;padding-top:16px;border-top:1px solid #344b6b}.note{font-size:12px;color:#aabbd3;line-height:1.5}.toast{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#153b2c;color:#c9ffe3;padding:12px 18px;border-radius:12px;z-index:20}
+body.light{background:linear-gradient(145deg,#edf4ff,#dce9ff);color:#111d32}body.light header{background:#edf4ffdd}body.light .social{background:#ffffffc9;color:#111d32;border-color:#b8c9e2}body.light .intro,body.light .quote{color:#273b5a}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:150px 1fr;gap:18px}.avatar{width:140px;height:140px}}
+@media(max-width:540px){header{padding:12px}.brand{font-size:16px}main{padding:24px 14px}.hero{grid-template-columns:1fr;text-align:center}.avatar{width:140px;height:140px}.grid{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.linkeditor{grid-template-columns:1fr 1fr}.linkeditor input:nth-child(3){grid-column:1/-1}.settings{padding:15px}.settingsfoot{flex-wrap:wrap}}
+</style></head><body>
+<header><div class="brand"><b>AR</b><span id="headerName">My Social Hub</span></div><div><button id="themeBtn">☀️ Theme</button> <button class="primary" id="openSettings">⚙ Settings</button></div></header>
+<main><div class="hero"><div class="avatar" id="avatar">AR</div><div><h1 id="nameView">Abidur Rahman</h1><p class="subtitle" id="subtitleView">Student | Dreamer | Lifelong Learner</p><p class="intro" id="bioView">Assalamu Alaikum! 👋
+Welcome to my personal hub. Here you can find my social media links and connect with me.</p><div class="meta"><span id="locationView">📍 Dhaka, Bangladesh</span><span id="educationView">🎓 Darunnazat Madrasa</span></div></div></div>
+<section><h2 class="section-title">My Social Media</h2><div class="grid" id="socialGrid"></div></section>
+<div class="quote" id="quoteView">“Dream Big, Work Hard, Make It Happen.”</div><div class="footer">Made with ♥ by <span id="footerName">Abidur Rahman</span></div></main>
+<div class="overlay" id="overlay"><div class="settings">
+<div class="settingshead"><h2>⚙ Website Settings</h2><button id="closeSettings">✕</button></div>
+<div class="formgrid">
+<div class="field"><label>Your name</label><input id="nameInput"></div><div class="field"><label>Subtitle</label><input id="subtitleInput"></div>
+<div class="field full"><label>About / Intro</label><textarea id="bioInput"></textarea></div>
+<div class="field"><label>Location</label><input id="locationInput"></div><div class="field"><label>School / Institution</label><input id="educationInput"></div>
+<div class="field"><label>Favorite quote</label><input id="quoteInput"></div><div class="field"><label>Profile photo</label><input id="photoInput" type="file" accept="image/*"></div>
+<div class="field"><label>Accent color</label><input id="accentInput" type="color" value="#38bdf8"></div></div>
+<div class="linkshead"><strong>Social media links</strong><button class="primary" id="addLink">＋ Add link</button></div><div id="linksEditor"></div>
+<p class="note">Change platform name, URL, and description. Add or remove links. Use a full URL starting with https://.</p>
+<div class="settingsfoot"><button id="resetBtn">Reset defaults</button><div><button id="cancelBtn">Cancel</button> <button class="primary" id="saveBtn">Save changes</button></div></div>
+<p class="note">Settings save in this browser on this device. To show updates to everyone online, upload the updated website file to GitHub too.</div></div><div class="toast" id="toast">Changes saved!</div>
 <script>
-const themeBtn=document.getElementById('themeBtn');
-themeBtn.addEventListener('click',()=>{document.body.classList.toggle('light');});
-</script>
-</body>
-</html>
+const defaults={name:"Abidur Rahman",subtitle:"Student | Dreamer | Lifelong Learner",bio:"Assalamu Alaikum! 👋\nWelcome to my personal hub. Here you can find my social media links and connect with me.",location:"Dhaka, Bangladesh",education:"Darunnazat Madrasa",quote:"Dream Big, Work Hard, Make It Happen.",photo:"",accent:"#38bdf8",links:[
+{name:"Facebook",url:"https://www.facebook.com/",description:"Follow me on Facebook",icon:"f",color:"#1877f2"},
+{name:"LinkedIn",url:"https://www.linkedin.com/",description:"Connect professionally",icon:"in",color:"#0a66c2"},
+{name:"Telegram",url:"https://t.me/",description:"Join my channel",icon:"➤",color:"#229ed9"},
+{name:"Instagram",url:"https://www.instagram.com/",description:"Photos, reels & stories",icon:"◎",color:"#e1306c"},
+{name:"X (Twitter)",url:"https://x.com/",description:"Follow for updates",icon:"𝕏",color:"#111111"},
+{name:"WhatsApp",url:"https://wa.me/",description:"Chat with me",icon:"◉",color:"#20c66a"},
+{name:"YouTube",url:"https://www.youtube.com/",description:"Watch my videos",icon:"▶",color:"#ff0033"},
+{name:"GitHub",url:"https://github.com/",description:"Explore my projects",icon:"⌘",color:"#7c5cff"},
+{name:"Email",url:"mailto:your-email@example.com",description:"Send me a message",icon:"✉",color:"#e7a51a"},
+{name:"TikTok",url:"https://www.tiktok.com/",description:"Short videos & updates",icon:"♪",color:"#9146ff"}]};
+const $=id=>document.getElementById(id);let data=readData(),draft;
+function readData(){try{return JSON.parse(localStorage.getItem("mySocialHubSettings"))||JSON.parse(JSON.stringify(defaults))}catch(e){return JSON.parse(JSON.stringify(defaults))}}
+function urlFix(u){u=(u||"").trim();if(!u)return "#";if(/^https:\/\/|^mailto:|^tel:/i.test(u))return u;return "https://"+u}
+function render(){ $("headerName").textContent=data.name||"My Social Hub";$("nameView").textContent=data.name||"Your Name";$("subtitleView").textContent=data.subtitle||"";$("bioView").textContent=data.bio||"";$("locationView").textContent=data.location?"📍 "+data.location:"";$("educationView").textContent=data.education?"🎓 "+data.education:"";$("quoteView").textContent=data.quote?"“"+data.quote+"”":"";$("footerName").textContent=data.name||"";document.documentElement.style.setProperty("--accent",data.accent||"#38bdf8");
+const av=$("avatar");if(data.photo){av.innerHTML="";let im=document.createElement("img");im.src=data.photo;im.alt="Profile";av.appendChild(im)}else av.textContent=(data.name||"AR").split(/\s+/).map(x=>x[0]||"").slice(0,2).join("").toUpperCase();
+const grid=$("socialGrid");grid.innerHTML="";if(!data.links.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:20px">No links added yet. Open Settings to add one.</div>';return}
+data.links.forEach(l=>{let a=document.createElement("a");a.className="social";a.style.setProperty("--color",l.color||"#249bff");a.href=urlFix(l.url);a.target="_blank";a.rel="noopener noreferrer";let ic=document.createElement("span");ic.className="icon";ic.textContent=l.icon||"↗";let info=document.createElement("span");info.className="info";let st=document.createElement("strong");st.textContent=l.name||"Social link";let ds=document.createElement("span");ds.textContent=l.description||"Visit my profile";info.append(st,ds);let ar=document.createElement("span");ar.className="arrow";ar.textContent="›";a.append(ic,info,ar);grid.appendChild(a)})}
+function openSettings(){draft=JSON.parse(JSON.stringify(data));fill();$("overlay").classList.add("open")}
+function fill(){$("nameInput").value=draft.name||"";$("subtitleInput").value=draft.subtitle||"";$("bioInput").value=draft.bio||"";$("locationInput").value=draft.location||"";$("educationInput").value=draft.education||"";$("quoteInput").value=draft.quote||"";$("accentInput").value=draft.accent||"#38bdf8";drawEditors()}
+function drawEditors(){let box=$("linksEditor");box.innerHTML="";draft.links.forEach((l,i)=>{let row=document.createElement("div");row.className="linkeditor";["name","url","description"].forEach(k=>{let inp=document.createElement("input");inp.value=l[k]||"";inp.placeholder=k==="name"?"Platform name":k==="url"?"Profile URL":"Description";inp.addEventListener("input",()=>draft.links[i][k]=inp.value);row.appendChild(inp)});let rm=document.createElement("button");rm.textContent="Remove";rm.addEventListener("click",()=>{draft.links.splice(i,1);drawEditors()});row.appendChild(rm);box.appendChild(row)})}
+$("openSettings").onclick=openSettings;$("closeSettings").onclick=$("cancelBtn").onclick=()=>$("overlay").classList.remove("open");
+$("overlay").onclick=e=>{if(e.target===$("overlay"))$("overlay").classList.remove("open")};
+$("addLink").onclick=()=>{draft.links.push({name:"New social media",url:"https://",description:"Connect with me",icon:"↗",color:"#38bdf8"});drawEditors()};
+$("photoInput").onchange=e=>{let f=e.target.files[0];if(!f)return;if(f.size>1500000){alert("Choose a photo under 1.5 MB.");e.target.value="";return}let r=new FileReader();r.onload=()=>draft.photo=r.result;r.readAsDataURL(f)};
+$("saveBtn").onclick=()=>{draft.name=$("nameInput").value.trim();draft.subtitle=$("subtitleInput").value.trim();draft.bio=$("bioInput").value;draft.location=$("locationInput").value.trim();draft.education=$("educationInput").value.trim();draft.quote=$("quoteInput").value.trim();draft.accent=$("accentInput").value;draft.links=draft.links.filter(l=>l.name.trim()&&l.url.trim());data=draft;try{localStorage.setItem("mySocialHubSettings",JSON.stringify(data));render();$("overlay").classList.remove("open");$("toast").style.display="block";setTimeout(()=>$("toast").style.display="none",2200)}catch(e){alert("Could not save. Try a smaller photo.")}};
+$("resetBtn").onclick=()=>{if(confirm("Reset all settings to default?")){draft=JSON.parse(JSON.stringify(defaults));fill()}};
+$("themeBtn").onclick=()=>document.body.classList.toggle("light");render();
+</script></body></html>
