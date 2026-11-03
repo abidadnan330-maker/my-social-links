@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#4F46E5">
+<title>Abidur Rahman | Social Links</title>
+<style>
+:root{--bg:#07101f;--card:rgba(19,34,58,.78);--solid:#10203a;--text:#f4f7ff;--muted:#b9c6dd;--line:rgba(137,168,224,.28);--accent:#4F46E5;--accent2:#8458ff;--intro:#e4ebfa;--header:rgba(4,10,20,.78);--input:rgba(8,16,32,.6);--scale:1}
+:root[data-theme="light"]{--bg:#edf4ff;--card:rgba(255,255,255,.85);--solid:#ffffff;--text:#111d32;--muted:#52617a;--line:rgba(40,72,120,.2);--intro:#2c3d57;--header:rgba(240,246,255,.85);--input:#f6f9ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 80% 15%,color-mix(in srgb,var(--accent) 35%,transparent) 0,transparent 36%),radial-gradient(ellipse at 10% 85%,color-mix(in srgb,var(--accent2) 28%,transparent) 0,transparent 35%),var(--bg)}
+button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit}
+header{display:flex;align-items:center;justify-content:space-between;padding:16px clamp(16px,5vw,70px);border-bottom:1px solid var(--line);background:var(--header);backdrop-filter:blur(14px);position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:14px;font-weight:800;font-size:clamp(17px,2vw,24px);cursor:pointer}
+.logo{font-size:29px;font-weight:900;letter-spacing:-4px;color:var(--accent);text-shadow:0 0 20px var(--accent);margin-right:8px}
+.tagline{font-size:14px;color:var(--muted);font-weight:400;border-left:1px solid var(--line);padding-left:18px}
+.hbtns{display:flex;gap:10px}
+.hbtn{border:1px solid var(--line);background:var(--card);color:var(--text);padding:10px 14px;border-radius:30px;cursor:pointer}
+.hbtn:hover{border-color:var(--accent)}
+.hbtn.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+
+/* ---------- Main profile page ---------- */
+main{max-width:1180px;margin:auto;padding:42px 22px 24px;zoom:var(--scale)}
+.hero{display:grid;grid-template-columns:250px 1fr;gap:35px;align-items:center;min-height:340px}
+.avatar{width:220px;height:220px;border-radius:50%;border:4px solid var(--accent);box-shadow:0 0 35px color-mix(in srgb,var(--accent) 45%,transparent);display:grid;place-items:center;background:linear-gradient(135deg,#173968,#101d3c);color:#fff;font-size:76px;margin:auto;animation:float 5s ease-in-out infinite;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+@keyframes float{50%{transform:translateY(-8px)}}
+h1{font-size:clamp(34px,5vw,58px);margin:0 0 8px;letter-spacing:-1.5px}
+.subtitle{font-size:clamp(17px,2vw,24px);color:var(--accent);margin:0 0 18px;filter:brightness(1.35)}
+:root[data-theme="light"] .subtitle{filter:none}
+.rule{width:260px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2),transparent);margin-bottom:20px}
+.intro{font-size:17px;line-height:1.7;color:var(--intro);max-width:600px;white-space:pre-line}
+.meta{display:inline-flex;gap:16px;flex-wrap:wrap;margin-top:12px;color:var(--muted);border:1px solid var(--line);border-radius:30px;padding:10px 16px;font-size:14px}
+section{margin-top:45px}
+.section-title{display:flex;align-items:center;gap:20px;justify-content:center;margin-bottom:24px;font-size:30px}
+.section-title:before,.section-title:after{content:"";height:2px;flex:1;max-width:210px;background:linear-gradient(90deg,transparent,var(--accent),var(--accent2))}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.layout-list .grid{grid-template-columns:1fr;max-width:640px;margin:auto}
+.social{--color:#249bff;display:flex;align-items:center;gap:15px;text-decoration:none;color:var(--text);padding:16px 18px;border:1px solid var(--line);border-radius:19px;background:var(--card);transition:transform .25s,border-color .25s,box-shadow .25s;min-width:0}
+.social:hover{transform:translateY(-5px);border-color:var(--color);box-shadow:0 12px 28px #0003,0 0 18px color-mix(in srgb,var(--color) 22%,transparent)}
+.icon{width:48px;height:48px;flex:0 0 48px;border-radius:50%;display:grid;place-items:center;background:var(--color);color:white;font-size:23px;font-weight:800}
+.info{min-width:0;flex:1}
+.info strong{display:block;font-size:17px;margin-bottom:4px}
+.info span{display:block;color:var(--muted);font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.arrow{font-size:25px;color:var(--color);transition:transform .2s}
+.social:hover .arrow{transform:translateX(4px)}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:30px;border:1px dashed var(--line);border-radius:19px}
+.quote{text-align:center;margin:44px 0 24px;font-family:Georgia,serif;font-style:italic;font-size:clamp(20px,3vw,29px);color:var(--text)}
+.footer{text-align:center;color:var(--muted);font-size:14px;padding:18px 0 28px}
+.footer .icons{display:flex;gap:18px;justify-content:center;margin:18px 0 28px}
+.footer a{color:var(--muted);text-decoration:none;font-weight:700}
+footer .heart{color:#ff5b75}
+.no-anim .avatar{animation:none}
+.no-anim *{transition:none!important}
+.hide-quote .quote{display:none}
+.hide-meta .meta{display:none}
+.hide-footer-icons .footer .icons{display:none}
+
+/* ---------- Settings page ---------- */
+#settingsView{display:none;max-width:1180px;margin:auto;padding:30px 22px 60px}
+body.in-settings #settingsView{display:block}
+body.in-settings main{display:none}
+.s-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.s-top h2{margin:0;font-size:28px}
+.s-top p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.saved{color:#22c55e;font-size:14px;font-weight:700;opacity:0;transition:opacity .3s}
+.saved.show{opacity:1}
+.s-layout{display:grid;grid-template-columns:230px 1fr;gap:24px;align-items:start}
+.snav{display:flex;flex-direction:column;gap:6px;position:sticky;top:90px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:10px}
+.snav button{display:flex;align-items:center;gap:10px;text-align:left;padding:11px 12px;border:0;border-radius:12px;background:transparent;cursor:pointer;color:var(--muted);font-weight:600}
+.snav button:hover{background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--text)}
+.snav button.active{background:var(--accent);color:#fff}
+.panel{display:none;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.panel.active{display:block}
+.panel h3{margin:0 0 4px;font-size:21px}
+.panel>p.desc{margin:0 0 20px;color:var(--muted);font-size:14px}
+.field{margin-bottom:18px}
+.field label.lbl{display:block;font-weight:700;font-size:14px;margin-bottom:7px}
+.field small{display:block;color:var(--muted);margin-top:6px;font-size:12px}
+.field input[type=text],.field input[type=url],.field textarea,.field select,.lrow input{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:12px;background:var(--input);outline:none}
+.field input:focus,.field textarea:focus,.field select:focus,.lrow input:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent)}
+.field textarea{min-height:96px;resize:vertical;line-height:1.5}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg button{flex:1;min-width:90px;padding:10px 8px;border:1px solid var(--line);background:var(--input);border-radius:11px;cursor:pointer}
+.seg button.active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+.swatches{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.sw{width:36px;height:36px;border-radius:50%;border:3px solid transparent;cursor:pointer;outline:1px solid var(--line)}
+.sw.active{border-color:var(--text)}
+input[type=color]{width:36px;height:36px;padding:0;border:0;background:none;cursor:pointer}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.toggle-row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.toggle-row:last-child{border-bottom:0}
+.toggle-row b{display:block;font-size:15px}
+.toggle-row span{color:var(--muted);font-size:13px}
+.switch{position:relative;width:46px;height:26px;flex:0 0 46px}
+.switch input{opacity:0;width:0;height:0}
+.slider{position:absolute;inset:0;background:var(--line);border-radius:26px;cursor:pointer;transition:.2s}
+.slider:before{content:"";position:absolute;width:20px;height:20px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.2s}
+.switch input:checked+.slider{background:var(--accent)}
+.switch input:checked+.slider:before{transform:translateX(20px)}
+.btn{padding:10px 16px;border-radius:12px;border:1px solid var(--line);background:var(--input);cursor:pointer;font-weight:700}
+.btn:hover{border-color:var(--accent)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.danger{color:#ff5b75}
+.btn.danger:hover{border-color:#ff5b75}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.lrow{border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:12px;background:var(--input)}
+.lhead{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.lhead .icon{width:38px;height:38px;flex:0 0 38px;font-size:18px}
+.lhead .lname{flex:1;font-weight:800;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mini{width:32px;height:32px;border-radius:9px;border:1px solid var(--line);background:var(--card);cursor:pointer;display:grid;place-items:center}
+.mini:hover{border-color:var(--accent)}
+.mini:disabled{opacity:.35;cursor:default}
+.addbox{border:1px dashed var(--line);border-radius:16px;padding:16px;margin-top:6px}
+.addbox h4{margin:0 0 12px}
+.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:20px;background:color-mix(in srgb,var(--accent) 25%,transparent);margin-left:6px;font-weight:700}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);background:var(--solid);border:1px solid var(--line);padding:12px 18px;border-radius:14px;opacity:0;pointer-events:none;transition:.3s;z-index:20;box-shadow:0 10px 30px #0005}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:190px 1fr;gap:24px}.avatar{width:170px;height:170px;font-size:60px}
+  .s-layout{grid-template-columns:1fr}.snav{flex-direction:row;overflow-x:auto;position:static}.snav button{white-space:nowrap}}
+@media(max-width:570px){header{padding:12px 14px}.tagline{display:none}.hbtn .t{display:none}main{padding:28px 15px}.hero{grid-template-columns:1fr;text-align:center;gap:20px}.avatar{width:155px;height:155px}.rule{margin:0 auto 17px}.meta{justify-content:center}.grid{grid-template-columns:1fr}.section-title{font-size:25px}.social{padding:14px}.intro{font-size:16px}
+  #settingsView{padding:20px 14px 60px}.two{grid-template-columns:1fr}.panel{padding:18px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand" id="brand"><span class="logo">AR</span><span id="brandName">Abidur Rahman</span><span class="tagline">Connect · Follow · Explore</span></div>
+  <div class="hbtns">
+    <button class="hbtn" id="themeBtn" aria-label="Toggle theme">☀️ / 🌙</button>
+    <button class="hbtn primary" id="settingsBtn">⚙️ <span class="t">Settings</span></button>
+  </div>
+</header>
+
+<!-- ===== Profile page ===== -->
+<main id="main">
+  <div class="hero">
+    <div class="avatar" id="avatar" aria-label="Profile avatar"></div>
+    <div>
+      <h1 id="pName"></h1>
+      <p class="subtitle" id="pSub"></p>
+      <div class="rule"></div>
+      <p class="intro" id="pIntro"></p>
+      <div class="meta" id="pMeta"></div>
+    </div>
+  </div>
+  <section>
+    <h2 class="section-title">My Social Media</h2>
+    <div class="grid" id="grid"></div>
+  </section>
+  <div class="quote" id="pQuote"></div>
+  <div class="footer">
+    <div class="icons" id="fIcons"></div>
+    <footer>Made with <span class="heart">♥</span> by <span id="fName"></span></footer>
+  </div>
+</main>
+
+<!-- ===== Settings page ===== -->
+<div id="settingsView">
+  <div class="s-top">
+    <div><h2>Settings</h2><p>Manage your profile, links and appearance. Changes save automatically.</p></div>
+    <div style="display:flex;align-items:center;gap:14px"><span class="saved" id="savedTag">✓ Saved</span><button class="btn pri" id="backBtn">← Back to page</button></div>
+  </div>
+
+  <div class="s-layout">
+    <nav class="snav" id="snav">
+      <button data-tab="profile" class="active">👤 Profile</button>
+      <button data-tab="links">🔗 Social Links</button>
+      <button data-tab="appearance">🎨 Appearance</button>
+      <button data-tab="display">🧩 Display</button>
+      <button data-tab="data">💾 Data & Backup</button>
+    </nav>
+
+    <div>
+      <!-- Profile -->
+      <div class="panel active" id="tab-profile">
+        <h3>Profile</h3><p class="desc">This information appears on your public page.</p>
+        <div class="two">
+          <div class="field"><label class="lbl">Full name</label><input type="text" data-bind="profile.name" maxlength="60"></div>
+          <div class="field"><label class="lbl">Avatar initials</label><input type="text" data-bind="profile.initials" maxlength="3"><small>Used when no photo URL is set.</small></div>
+        </div>
+        <div class="field"><label class="lbl">Photo URL (optional)</label><input type="url" data-bind="profile.photo" placeholder="https://..."></div>
+        <div class="field"><label class="lbl">Tagline</label><input type="text" data-bind="profile.subtitle" maxlength="100"></div>
+        <div class="field"><label class="lbl">Intro text</label><textarea data-bind="profile.intro" maxlength="400"></textarea></div>
+        <div class="two">
+          <div class="field"><label class="lbl">Location</label><input type="text" data-bind="profile.location" maxlength="60"></div>
+          <div class="field"><label class="lbl">School / Work</label><input type="text" data-bind="profile.school" maxlength="60"></div>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="panel" id="tab-links">
+        <h3>Social Links</h3><p class="desc">Edit URLs, show or hide, reorder, or add your own links.</p>
+        <div id="linkList"></div>
+        <div class="addbox">
+          <h4>＋ Add a custom link</h4>
+          <div class="two">
+            <div class="field"><label class="lbl">Name</label><input type="text" id="newName" placeholder="My Website" maxlength="30"></div>
+            <div class="field"><label class="lbl">URL</label><input type="text" id="newUrl" placeholder="https://example.com"></div>
+          </div>
+          <button class="btn pri" id="addLinkBtn">Add link</button>
+        </div>
+      </div>
+
+      <!-- Appearance -->
+      <div class="panel" id="tab-appearance">
+        <h3>Appearance</h3><p class="desc">Make the page look the way you like.</p>
+        <div class="field"><label class="lbl">Theme</label>
+          <div class="seg" data-key="theme"><button data-val="dark">🌙 Dark</button><button data-val="light">☀️ Light</button><button data-val="auto">🖥 Auto</button></div>
+        </div>
+        <div class="field"><label class="lbl">Accent color</label>
+          <div class="swatches" id="swatches"></div>
+          <small>The first one is the indigo used in CreatorFlow. Or pick any color with the picker at the end.</small>
+        </div>
+        <div class="field"><label class="lbl">Text size <span id="scaleVal" style="color:var(--muted);font-weight:400"></span></label><input type="range" id="scale" min="85" max="125" step="5"></div>
+        <div class="field"><label class="lbl">Link layout</label>
+          <div class="seg" data-key="layout"><button data-val="grid">▦ Grid</button><button data-val="list">☰ List</button></div>
+        </div>
+      </div>
+
+      <!-- Display -->
+      <div class="panel" id="tab-display">
+        <h3>Display</h3><p class="desc">Choose what is visible on the page.</p>
+        <div class="toggle-row"><div><b>Animations</b><span>Floating avatar and hover effects</span></div><label class="switch"><input type="checkbox" data-bind="ui.anim"><span class="slider"></span></label></div>
+        <div class="toggle-row"><div><b>Show location & school</b><span>The pill under your intro</span></div><label class="switch"><input type="checkbox" data-bind="ui.meta"><span class="slider"></span></label></div>
+        <div class="toggle-row"><div><b>Show quote</b><span>The quote above the footer</span></div><label class="switch"><input type="checkbox" data-bind="ui.quote"><span class="slider"></span></label></div>
+        <div class="toggle-row"><div><b>Footer icons</b><span>Quick icon row in the footer</span></div><label class="switch"><input type="checkbox" data-bind="ui.footerIcons"><span class="slider"></span></label></div>
+        <div class="field" style="margin-top:18px"><label class="lbl">Quote text</label><input type="text" data-bind="ui.quoteText" maxlength="120"></div>
+      </div>
+
+      <!-- Data -->
+      <div class="panel" id="tab-data">
+        <h3>Data & Backup</h3><p class="desc">Everything is stored only in this browser. Back it up if you change devices.</p>
+        <div class="btns" style="margin-bottom:20px">
+          <button class="btn" id="exportBtn">⬇ Export settings</button>
+          <button class="btn" id="importBtn">⬆ Import settings</button>
+          <input type="file" id="importFile" accept="application/json" hidden>
+        </div>
+        <div class="field"><label class="lbl" style="color:#ff5b75">Danger zone</label>
+          <button class="btn danger" id="resetBtn">↺ Reset everything to default</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  var KEY='abidur-settings-v2';
+  var DEF={
+    profile:{name:'Abidur Rahman',initials:'AR',photo:'',subtitle:'Student  |  Dreamer  |  Lifelong Learner',intro:'Assalamu Alaikum! 👋\nWelcome to my personal hub. Here you can find all my social media links, connect with me, and explore more about me.',location:'Dhaka, Bangladesh',school:'Darunnazat Madrasa'},
+    ui:{theme:'dark',accent:'#4F46E5',accent2:'#8458ff',scale:100,layout:'grid',anim:true,meta:true,quote:true,footerIcons:true,quoteText:'Dream Big, Work Hard, Make It Happen.'},
+    links:[
+      {id:'facebook',name:'Facebook',desc:'Follow me on Facebook',icon:'f',color:'#1877f2',url:'https://www.facebook.com/',visible:true},
+      {id:'linkedin',name:'LinkedIn',desc:'Connect professionally',icon:'in',color:'#0a66c2',url:'https://www.linkedin.com/in/abid-adnan-094597446/',visible:true},
+      {id:'telegram',name:'Telegram',desc:'Join my channel',icon:'➤',color:'#229ed9',url:'',visible:true},
+      {id:'instagram',name:'Instagram',desc:'Photos, reels & stories',icon:'◎',color:'#e1306c',url:'',visible:true},
+      {id:'x',name:'X (Twitter)',desc:'Follow for updates',icon:'𝕏',color:'#111111',url:'',visible:true},
+      {id:'whatsapp',name:'WhatsApp',desc:'Chat with me',icon:'◉',color:'#20c66a',url:'',visible:true},
+      {id:'youtube',name:'YouTube',desc:'Watch my videos',icon:'▶',color:'#ff0033',url:'',visible:true},
+      {id:'github',name:'GitHub',desc:'Explore my projects',icon:'⌘',color:'#7c5cff',url:'',visible:true},
+      {id:'email',name:'Email',desc:'Send me a message',icon:'✉',color:'#e7a51a',url:'your-email@example.com',visible:true},
+      {id:'tiktok',name:'TikTok',desc:'Short videos & updates',icon:'♪',color:'#9146ff',url:'',visible:true}
+    ]
+  };
+  var COLORS=[['#4F46E5','#8458ff'],['#35b7ff','#8458ff'],['#22c55e','#06b6d4'],['#f43f5e','#f59e0b'],['#a855f7','#ec4899'],['#14b8a6','#3b82f6']];
+
+  var $=function(id){return document.getElementById(id)};
+  var root=document.documentElement, body=document.body;
+  var mq=window.matchMedia('(prefers-color-scheme: dark)');
+  function clone(o){return JSON.parse(JSON.stringify(o))}
+  function load(){
+    try{
+      var r=JSON.parse(localStorage.getItem(KEY)||'null'); if(!r) return clone(DEF);
+      var d=clone(DEF);
+      return {profile:Object.assign(d.profile,r.profile||{}),ui:Object.assign(d.ui,r.ui||{}),links:Array.isArray(r.links)&&r.links.length?r.links:d.links};
+    }catch(e){return clone(DEF)}
+  }
+  var S=load(), saveTimer, tagTimer, toastTimer;
+  function persist(){
+    clearTimeout(saveTimer);
+    saveTimer=setTimeout(function(){
+      try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}
+      var t=$('savedTag'); t.classList.add('show'); clearTimeout(tagTimer); tagTimer=setTimeout(function(){t.classList.remove('show')},1500);
+    },250);
+  }
+  function toast(m){var t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.remove('show')},2200)}
+  function safeUrl(u){
+    u=(u||'').trim(); if(!u) return '#';
+    if(/^(https?:|mailto:|tel:)/i.test(u)) return u;
+    if(/^[\w.+-]+@[\w-]+\.[\w.-]+$/.test(u)) return 'mailto:'+u;
+    if(/^[a-z][a-z0-9+.-]*:/i.test(u)) return '#';
+    return 'https://'+u;
+  }
+  function getPath(p){return p.split('.').reduce(function(o,k){return o[k]},S)}
+  function setPath(p,v){var a=p.split('.'),k=a.pop();a.reduce(function(o,x){return o[x]},S)[k]=v}
+
+  /* ---------- render profile page ---------- */
+  function renderPage(){
+    var p=S.profile,u=S.ui;
+    $('brandName').textContent=p.name; $('pName').textContent=p.name; $('fName').textContent=p.name;
+    $('pSub').textContent=p.subtitle; $('pIntro').textContent=p.intro;
+    document.title=p.name+' | Social Links';
+    var av=$('avatar'); av.textContent='';
+    if(p.photo && /^https?:/i.test(p.photo)){var im=document.createElement('img');im.alt=p.name;im.src=p.photo;im.onerror=function(){av.textContent=p.initials};av.appendChild(im)}
+    else av.textContent=p.initials;
+    var m=$('pMeta'); m.textContent='';
+    if(p.location){var a=document.createElement('span');a.textContent='📍 '+p.location;m.appendChild(a)}
+    if(p.school){var b=document.createElement('span');b.textContent='🎓 '+p.school;m.appendChild(b)}
+    if(!m.children.length) m.style.display='none'; else m.style.display='';
+    $('pQuote').textContent='“'+u.quoteText+'”';
+    var g=$('grid'); g.textContent='';
+    var vis=S.links.filter(function(l){return l.visible});
+    vis.forEach(function(l){
+      var a=document.createElement('a'); a.className='social'; a.style.setProperty('--color',l.color||'#249bff');
+      a.href=safeUrl(l.url);
+      if(!/^mailto:|^tel:/i.test(a.href)&&a.getAttribute('href')!=='#'){a.target='_blank';a.rel='noopener'}
+      var ic=document.createElement('span');ic.className='icon';ic.textContent=l.icon||(l.name||'?').charAt(0).toUpperCase();
+      var inf=document.createElement('span');inf.className='info';
+      var st=document.createElement('strong');st.textContent=l.name;
+      var ds=document.createElement('span');ds.textContent=l.desc||'';
+      inf.appendChild(st);inf.appendChild(ds);
+      var ar=document.createElement('span');ar.className='arrow';ar.textContent='›';
+      a.appendChild(ic);a.appendChild(inf);a.appendChild(ar);g.appendChild(a);
+    });
+    if(!vis.length){var e=document.createElement('div');e.className='empty';e.textContent='No links to show yet. Add some from Settings.';g.appendChild(e)}
+    var f=$('fIcons'); f.textContent='';
+    vis.slice(0,6).forEach(function(l){var a=document.createElement('a');a.href=safeUrl(l.url);a.textContent=l.icon||l.name.charAt(0);a.title=l.name;f.appendChild(a)});
+  }
+
+  /* ---------- apply ui ---------- */
+  function applyUI(){
+    var u=S.ui, t=u.theme==='auto'?(mq.matches?'dark':'light'):u.theme;
+    root.setAttribute('data-theme',t);
+    root.style.setProperty('--accent',u.accent); root.style.setProperty('--accent2',u.accent2);
+    root.style.setProperty('--scale',u.scale/100);
+    body.classList.toggle('layout-list',u.layout==='list');
+    body.classList.toggle('no-anim',!u.anim);
+    body.classList.toggle('hide-quote',!u.quote);
+    body.classList.toggle('hide-meta',!u.meta);
+    body.classList.toggle('hide-footer-icons',!u.footerIcons);
+    var tm=document.querySelector('meta[name=theme-color]'); if(tm) tm.content=u.accent;
+    syncControls();
+  }
+  function syncControls(){
+    document.querySelectorAll('.seg').forEach(function(seg){
+      seg.querySelectorAll('button').forEach(function(b){b.classList.toggle('active',b.dataset.val===String(S.ui[seg.dataset.key]))});
+    });
+    document.querySelectorAll('.sw').forEach(function(el){el.classList.toggle('active',el.dataset.c.toLowerCase()===S.ui.accent.toLowerCase())});
+    $('scale').value=S.ui.scale; $('scaleVal').textContent=S.ui.scale+'%';
+    var cp=$('customColor'); if(cp && /^#[0-9a-f]{6}$/i.test(S.ui.accent)) cp.value=S.ui.accent;
+  }
+  function syncBindings(){
+    document.querySelectorAll('[data-bind]').forEach(function(el){
+      var v=getPath(el.dataset.bind);
+      if(el.type==='checkbox') el.checked=!!v; else el.value=v==null?'':v;
+    });
+  }
+
+  /* ---------- binding ---------- */
+  document.querySelectorAll('[data-bind]').forEach(function(el){
+    el.addEventListener(el.type==='checkbox'?'change':'input',function(){
+      setPath(el.dataset.bind, el.type==='checkbox'?el.checked:el.value);
+      persist(); renderPage(); applyUI();
+    });
+  });
+  document.querySelectorAll('.seg').forEach(function(seg){
+    seg.addEventListener('click',function(e){
+      var b=e.target.closest('button'); if(!b) return;
+      S.ui[seg.dataset.key]=b.dataset.val; persist(); applyUI();
+    });
+  });
+  $('scale').addEventListener('input',function(e){S.ui.scale=+e.target.value;persist();applyUI()});
+
+  // swatches
+  COLORS.forEach(function(c){
+    var el=document.createElement('div'); el.className='sw'; el.dataset.c=c[0]; el.title=c[0];
+    el.style.background='linear-gradient(135deg,'+c[0]+','+c[1]+')';
+    el.onclick=function(){S.ui.accent=c[0];S.ui.accent2=c[1];persist();applyUI()};
+    $('swatches').appendChild(el);
+  });
+  var cp=document.createElement('input'); cp.type='color'; cp.id='customColor'; cp.title='Custom color';
+  cp.addEventListener('input',function(){S.ui.accent=cp.value;S.ui.accent2=cp.value;persist();applyUI()});
+  $('swatches').appendChild(cp);
+
+  /* ---------- link editor ---------- */
+  function renderLinkEditor(){
+    var box=$('linkList'); box.textContent='';
+    S.links.forEach(function(l,i){
+      var row=document.createElement('div'); row.className='lrow';
+      var head=document.createElement('div'); head.className='lhead';
+      var ic=document.createElement('span'); ic.className='icon'; ic.style.background=l.color||'#249bff'; ic.textContent=l.icon||l.name.charAt(0).toUpperCase();
+      var nm=document.createElement('span'); nm.className='lname'; nm.textContent=l.name;
+      if(l.custom){var bd=document.createElement('span');bd.className='badge';bd.textContent='custom';nm.appendChild(bd)}
+      head.appendChild(ic); head.appendChild(nm);
+      function mini(txt,title,fn,dis){var b=document.createElement('button');b.className='mini';b.textContent=txt;b.title=title;b.disabled=!!dis;b.onclick=fn;return b}
+      head.appendChild(mini('↑','Move up',function(){move(i,-1)},i===0));
+      head.appendChild(mini('↓','Move down',function(){move(i,1)},i===S.links.length-1));
+      var sw=document.createElement('label'); sw.className='switch'; sw.title='Show on page';
+      var ck=document.createElement('input'); ck.type='checkbox'; ck.checked=!!l.visible;
+      ck.onchange=function(){l.visible=ck.checked;persist();renderPage()};
+      var sl=document.createElement('span'); sl.className='slider'; sw.appendChild(ck); sw.appendChild(sl);
+      head.appendChild(sw);
+      if(l.custom) head.appendChild(mini('🗑','Delete',function(){if(confirm('Delete "'+l.name+'"?')){S.links.splice(i,1);persist();renderPage();renderLinkEditor()}}));
+      row.appendChild(head);
+      var grid=document.createElement('div'); grid.className='two';
+      var u=document.createElement('input'); u.type='text'; u.value=l.url||''; u.placeholder=l.id==='email'?'you@example.com':'https://...';
+      u.oninput=function(){l.url=u.value;persist();renderPage()};
+      var d=document.createElement('input'); d.type='text'; d.value=l.desc||''; d.placeholder='Short description'; d.maxLength=40;
+      d.oninput=function(){l.desc=d.value;persist();renderPage()};
+      grid.appendChild(u); grid.appendChild(d); row.appendChild(grid);
+      box.appendChild(row);
+    });
+  }
+  function move(i,dir){var j=i+dir;if(j<0||j>=S.links.length)return;var t=S.links[i];S.links[i]=S.links[j];S.links[j]=t;persist();renderPage();renderLinkEditor()}
+  $('addLinkBtn').addEventListener('click',function(){
+    var n=$('newName').value.trim(), u=$('newUrl').value.trim();
+    if(!n){toast('Please enter a name');return}
+    S.links.push({id:'c'+Date.now(),name:n,desc:'Visit my '+n,icon:n.charAt(0).toUpperCase(),color:S.ui.accent,url:u,visible:true,custom:true});
+    $('newName').value='';$('newUrl').value='';
+    persist();renderPage();renderLinkEditor();toast('Link added');
+  });
+
+  /* ---------- data ---------- */
+  $('exportBtn').onclick=function(){
+    var blob=new Blob([JSON.stringify(S,null,2)],{type:'application/json'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='my-page-settings.json';document.body.appendChild(a);a.click();a.remove();
+    setTimeout(function(){URL.revokeObjectURL(a.href)},1000); toast('Settings exported');
+  };
+  $('importBtn').onclick=function(){$('importFile').click()};
+  $('importFile').onchange=function(e){
+    var f=e.target.files[0]; if(!f) return;
+    var r=new FileReader();
+    r.onload=function(){
+      try{
+        var o=JSON.parse(r.result), d=clone(DEF);
+        S={profile:Object.assign(d.profile,o.profile||{}),ui:Object.assign(d.ui,o.ui||{}),links:Array.isArray(o.links)&&o.links.length?o.links:d.links};
+        persist();refreshAll();toast('Settings imported');
+      }catch(err){toast('Invalid file')}
+    };
+    r.readAsText(f); e.target.value='';
+  };
+  $('resetBtn').onclick=function(){
+    if(confirm('Reset all settings to default?')){S=clone(DEF);persist();refreshAll();toast('Reset done')}
+  };
+
+  /* ---------- tabs & routing ---------- */
+  $('snav').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    document.querySelectorAll('#snav button').forEach(function(x){x.classList.toggle('active',x===b)});
+    document.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('active',p.id==='tab-'+b.dataset.tab)});
+  });
+  function route(){
+    var inS=location.hash==='#settings';
+    body.classList.toggle('in-settings',inS);
+    $('settingsBtn').style.display=inS?'none':'';
+    window.scrollTo(0,0);
+  }
+  $('settingsBtn').onclick=function(){location.hash='settings'};
+  $('backBtn').onclick=function(){history.pushState('',document.title,location.pathname+location.search);route()};
+  $('brand').onclick=function(){if(location.hash==='#settings')$('backBtn').click()};
+  window.addEventListener('hashchange',route);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&location.hash==='#settings')$('backBtn').click()});
+
+  $('themeBtn').onclick=function(){S.ui.theme=root.getAttribute('data-theme')==='dark'?'light':'dark';persist();applyUI()};
+  if(mq.addEventListener) mq.addEventListener('change',function(){if(S.ui.theme==='auto')applyUI()});
+
+  function refreshAll(){renderPage();renderLinkEditor();syncBindings();applyUI()}
+  refreshAll(); route();
+})();
+</script>
+</body>
+</html>
