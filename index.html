@@ -1,72 +1,131 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>My Social Hub</title>
-<style>
-:root{--bg:#07101f;--panel:#14243c;--text:#f4f7ff;--muted:#b9c6dd;--line:#344b6b;--accent:#38bdf8}
-*{box-sizing:border-box}body{margin:0;color:var(--text);font:16px Segoe UI,Arial;background:radial-gradient(ellipse at 80% 0,#183d7b,transparent 38%),linear-gradient(145deg,#050b17,#08162b 60%,#060b17);min-height:100vh}
-header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 5%;border-bottom:1px solid #344b6b;background:#050b17cc;position:sticky;top:0}
-button{cursor:pointer;color:var(--text);background:#142640;border:1px solid #344b6b;border-radius:11px;padding:10px 14px;font:inherit}button.primary{background:linear-gradient(120deg,#087fce,#7048dd);border:0;font-weight:bold}
-.brand{font-weight:800;font-size:20px}.brand b{color:#49baff;margin-right:12px}
-main{max-width:1100px;margin:auto;padding:34px 20px}.hero{display:grid;grid-template-columns:190px 1fr;gap:28px;align-items:center}
-.avatar{width:165px;height:165px;border-radius:50%;border:4px solid #49baff;box-shadow:0 0 32px #0878ff55;background:linear-gradient(135deg,#183968,#101d3c);display:grid;place-items:center;font-size:55px;font-weight:bold;margin:auto;overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover}
-h1{font-size:clamp(32px,5vw,54px);margin:0 0 8px}.subtitle{color:#75d2ff;font-size:22px;margin:0 0 16px}.intro{white-space:pre-wrap;line-height:1.65}.meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);margin-top:14px}.meta span{border:1px solid #344b6b;border-radius:30px;padding:9px 14px}
-section{margin-top:38px}.section-title{text-align:center;font-size:29px;margin-bottom:22px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.social{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--text);padding:15px;border:1px solid #344b6b;border-radius:17px;background:#13243dcc;transition:.2s;min-width:0}.social:hover{transform:translateY(-4px);border-color:var(--color)}
-.icon{width:46px;height:46px;flex:0 0 46px;border-radius:50%;display:grid;place-items:center;background:var(--color);color:white;font-size:22px;font-weight:800}.info{min-width:0;flex:1}.info strong{display:block;margin-bottom:4px}.info span{display:block;color:var(--muted);font-size:13px}.arrow{font-size:25px;color:var(--color)}
-.quote{text-align:center;margin:42px 0 20px;font:italic clamp(20px,3vw,28px) Georgia,serif}.footer{text-align:center;color:var(--muted);padding:16px 0 28px}
-.overlay{display:none;position:fixed;inset:0;background:#0009;backdrop-filter:blur(5px);z-index:10;overflow:auto;padding:18px}.overlay.open{display:block}
-.settings{max-width:760px;margin:20px auto;background:#0d1a2d;border:1px solid #334a6c;border-radius:20px;padding:22px}.settingshead,.linkshead,.settingsfoot{display:flex;align-items:center;justify-content:space-between;gap:12px}.settingshead h2{margin:0 0 16px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:13px;color:#c6d4e9;font-weight:600}
-input,textarea{width:100%;font:inherit;color:#f4f7ff;background:#071120;border:1px solid #344b6b;border-radius:10px;padding:11px}textarea{min-height:85px;resize:vertical}
-.linkeditor{display:grid;grid-template-columns:1fr 1.5fr 1.4fr auto;gap:8px;margin:9px 0}.linkeditor input{min-width:0}.linkeditor button{color:#ffb5bf}
-.linkshead{margin:22px 0 10px}.settingsfoot{margin-top:20px;padding-top:16px;border-top:1px solid #344b6b}.note{font-size:12px;color:#aabbd3;line-height:1.5}.toast{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#153b2c;color:#c9ffe3;padding:12px 18px;border-radius:12px;z-index:20}
-body.light{background:linear-gradient(145deg,#edf4ff,#dce9ff);color:#111d32}body.light header{background:#edf4ffdd}body.light .social{background:#ffffffc9;color:#111d32;border-color:#b8c9e2}body.light .intro,body.light .quote{color:#273b5a}
-@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:150px 1fr;gap:18px}.avatar{width:140px;height:140px}}
-@media(max-width:540px){header{padding:12px}.brand{font-size:16px}main{padding:24px 14px}.hero{grid-template-columns:1fr;text-align:center}.avatar{width:140px;height:140px}.grid{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.linkeditor{grid-template-columns:1fr 1fr}.linkeditor input:nth-child(3){grid-column:1/-1}.settings{padding:15px}.settingsfoot{flex-wrap:wrap}}
-</style></head><body>
-<header><div class="brand"><b>AR</b><span id="headerName">My Social Hub</span></div><div><button id="themeBtn">☀️ Theme</button> <button class="primary" id="openSettings">⚙ Settings</button></div></header>
-<main><div class="hero"><div class="avatar" id="avatar">AR</div><div><h1 id="nameView">Abidur Rahman</h1><p class="subtitle" id="subtitleView">Student | Dreamer | Lifelong Learner</p><p class="intro" id="bioView">Assalamu Alaikum! 👋
-Welcome to my personal hub. Here you can find my social media links and connect with me.</p><div class="meta"><span id="locationView">📍 Dhaka, Bangladesh</span><span id="educationView">🎓 Darunnazat Madrasa</span></div></div></div>
-<section><h2 class="section-title">My Social Media</h2><div class="grid" id="socialGrid"></div></section>
-<div class="quote" id="quoteView">“Dream Big, Work Hard, Make It Happen.”</div><div class="footer">Made with ♥ by <span id="footerName">Abidur Rahman</span></div></main>
-<div class="overlay" id="overlay"><div class="settings">
-<div class="settingshead"><h2>⚙ Website Settings</h2><button id="closeSettings">✕</button></div>
-<div class="formgrid">
-<div class="field"><label>Your name</label><input id="nameInput"></div><div class="field"><label>Subtitle</label><input id="subtitleInput"></div>
-<div class="field full"><label>About / Intro</label><textarea id="bioInput"></textarea></div>
-<div class="field"><label>Location</label><input id="locationInput"></div><div class="field"><label>School / Institution</label><input id="educationInput"></div>
-<div class="field"><label>Favorite quote</label><input id="quoteInput"></div><div class="field"><label>Profile photo</label><input id="photoInput" type="file" accept="image/*"></div>
-<div class="field"><label>Accent color</label><input id="accentInput" type="color" value="#38bdf8"></div></div>
-<div class="linkshead"><strong>Social media links</strong><button class="primary" id="addLink">＋ Add link</button></div><div id="linksEditor"></div>
-<p class="note">Change platform name, URL, and description. Add or remove links. Use a full URL starting with https://.</p>
-<div class="settingsfoot"><button id="resetBtn">Reset defaults</button><div><button id="cancelBtn">Cancel</button> <button class="primary" id="saveBtn">Save changes</button></div></div>
-<p class="note">Settings save in this browser on this device. To show updates to everyone online, upload the updated website file to GitHub too.</div></div><div class="toast" id="toast">Changes saved!</div>
-<script>
-const defaults={name:"Abidur Rahman",subtitle:"Student | Dreamer | Lifelong Learner",bio:"Assalamu Alaikum! 👋\nWelcome to my personal hub. Here you can find my social media links and connect with me.",location:"Dhaka, Bangladesh",education:"Darunnazat Madrasa",quote:"Dream Big, Work Hard, Make It Happen.",photo:"",accent:"#38bdf8",links:[
-{name:"Facebook",url:"https://www.facebook.com/",description:"Follow me on Facebook",icon:"f",color:"#1877f2"},
-{name:"LinkedIn",url:"https://www.linkedin.com/",description:"Connect professionally",icon:"in",color:"#0a66c2"},
-{name:"Telegram",url:"https://t.me/",description:"Join my channel",icon:"➤",color:"#229ed9"},
-{name:"Instagram",url:"https://www.instagram.com/",description:"Photos, reels & stories",icon:"◎",color:"#e1306c"},
-{name:"X (Twitter)",url:"https://x.com/",description:"Follow for updates",icon:"𝕏",color:"#111111"},
-{name:"WhatsApp",url:"https://wa.me/",description:"Chat with me",icon:"◉",color:"#20c66a"},
-{name:"YouTube",url:"https://www.youtube.com/",description:"Watch my videos",icon:"▶",color:"#ff0033"},
-{name:"GitHub",url:"https://github.com/",description:"Explore my projects",icon:"⌘",color:"#7c5cff"},
-{name:"Email",url:"mailto:your-email@example.com",description:"Send me a message",icon:"✉",color:"#e7a51a"},
-{name:"TikTok",url:"https://www.tiktok.com/",description:"Short videos & updates",icon:"♪",color:"#9146ff"}]};
-const $=id=>document.getElementById(id);let data=readData(),draft;
-function readData(){try{return JSON.parse(localStorage.getItem("mySocialHubSettings"))||JSON.parse(JSON.stringify(defaults))}catch(e){return JSON.parse(JSON.stringify(defaults))}}
-function urlFix(u){u=(u||"").trim();if(!u)return "#";if(/^https:\/\/|^mailto:|^tel:/i.test(u))return u;return "https://"+u}
-function render(){ $("headerName").textContent=data.name||"My Social Hub";$("nameView").textContent=data.name||"Your Name";$("subtitleView").textContent=data.subtitle||"";$("bioView").textContent=data.bio||"";$("locationView").textContent=data.location?"📍 "+data.location:"";$("educationView").textContent=data.education?"🎓 "+data.education:"";$("quoteView").textContent=data.quote?"“"+data.quote+"”":"";$("footerName").textContent=data.name||"";document.documentElement.style.setProperty("--accent",data.accent||"#38bdf8");
-const av=$("avatar");if(data.photo){av.innerHTML="";let im=document.createElement("img");im.src=data.photo;im.alt="Profile";av.appendChild(im)}else av.textContent=(data.name||"AR").split(/\s+/).map(x=>x[0]||"").slice(0,2).join("").toUpperCase();
-const grid=$("socialGrid");grid.innerHTML="";if(!data.links.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:20px">No links added yet. Open Settings to add one.</div>';return}
-data.links.forEach(l=>{let a=document.createElement("a");a.className="social";a.style.setProperty("--color",l.color||"#249bff");a.href=urlFix(l.url);a.target="_blank";a.rel="noopener noreferrer";let ic=document.createElement("span");ic.className="icon";ic.textContent=l.icon||"↗";let info=document.createElement("span");info.className="info";let st=document.createElement("strong");st.textContent=l.name||"Social link";let ds=document.createElement("span");ds.textContent=l.description||"Visit my profile";info.append(st,ds);let ar=document.createElement("span");ar.className="arrow";ar.textContent="›";a.append(ic,info,ar);grid.appendChild(a)})}
-function openSettings(){draft=JSON.parse(JSON.stringify(data));fill();$("overlay").classList.add("open")}
-function fill(){$("nameInput").value=draft.name||"";$("subtitleInput").value=draft.subtitle||"";$("bioInput").value=draft.bio||"";$("locationInput").value=draft.location||"";$("educationInput").value=draft.education||"";$("quoteInput").value=draft.quote||"";$("accentInput").value=draft.accent||"#38bdf8";drawEditors()}
-function drawEditors(){let box=$("linksEditor");box.innerHTML="";draft.links.forEach((l,i)=>{let row=document.createElement("div");row.className="linkeditor";["name","url","description"].forEach(k=>{let inp=document.createElement("input");inp.value=l[k]||"";inp.placeholder=k==="name"?"Platform name":k==="url"?"Profile URL":"Description";inp.addEventListener("input",()=>draft.links[i][k]=inp.value);row.appendChild(inp)});let rm=document.createElement("button");rm.textContent="Remove";rm.addEventListener("click",()=>{draft.links.splice(i,1);drawEditors()});row.appendChild(rm);box.appendChild(row)})}
-$("openSettings").onclick=openSettings;$("closeSettings").onclick=$("cancelBtn").onclick=()=>$("overlay").classList.remove("open");
-$("overlay").onclick=e=>{if(e.target===$("overlay"))$("overlay").classList.remove("open")};
-$("addLink").onclick=()=>{draft.links.push({name:"New social media",url:"https://",description:"Connect with me",icon:"↗",color:"#38bdf8"});drawEditors()};
-$("photoInput").onchange=e=>{let f=e.target.files[0];if(!f)return;if(f.size>1500000){alert("Choose a photo under 1.5 MB.");e.target.value="";return}let r=new FileReader();r.onload=()=>draft.photo=r.result;r.readAsDataURL(f)};
-$("saveBtn").onclick=()=>{draft.name=$("nameInput").value.trim();draft.subtitle=$("subtitleInput").value.trim();draft.bio=$("bioInput").value;draft.location=$("locationInput").value.trim();draft.education=$("educationInput").value.trim();draft.quote=$("quoteInput").value.trim();draft.accent=$("accentInput").value;draft.links=draft.links.filter(l=>l.name.trim()&&l.url.trim());data=draft;try{localStorage.setItem("mySocialHubSettings",JSON.stringify(data));render();$("overlay").classList.remove("open");$("toast").style.display="block";setTimeout(()=>$("toast").style.display="none",2200)}catch(e){alert("Could not save. Try a smaller photo.")}};
-$("resetBtn").onclick=()=>{if(confirm("Reset all settings to default?")){draft=JSON.parse(JSON.stringify(defaults));fill()}};
-$("themeBtn").onclick=()=>document.body.classList.toggle("light");render();
-</script></body></html>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abidur Social Gallery - Upload</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #121212; color: white; text-align: center; }
+        .upload-section { margin: 30px auto; padding: 20px; border: 2px dashed #38bdf8; max-width: 400px; border-radius: 10px; }
+        input[type="file"] { margin: 10px 0; }
+        button { background-color: #38bdf8; color: black; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        button:disabled { background-color: #555; }
+        #status { margin-top: 10px; color: #38bdf8; }
+        .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; }
+        .media-item { max-width: 300px; border: 1px solid #333; padding: 10px; border-radius: 8px; background: #1e1e1e; }
+        .media-item img, .media-item video { max-width: 100%; border-radius: 5px; }
+        .media-item audio { width: 100%; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Abidur Social Gallery</h1>
+    <p>এখানে আপনার ছবি, ভিডিও বা অডিও আপলোড করুন</p>
+
+    <!-- আপলোড সেকশন -->
+    <div class="upload-section">
+        <input type="file" id="fileChooser" accept="image/*,video/*,audio/*">
+        <br><br>
+        <button id="uploadBtn">আপলোড করুন</button>
+        <div id="status"></div>
+    </div>
+
+    <h2>গ্যালারি ভিউ</h2>
+    <!-- আপলোড করা ফাইলগুলো এখানে স্বয়ংক্রিয়ভাবে দেখাবে -->
+    <div class="gallery" id="galleryContainer"></div>
+
+    <!-- ফায়ারবেস মডিউল লাইব্রেরি (CDN) -->
+    <script type="module">
+        import { initializeApp } from "https://gstatic.com";
+        import { getDatabase, ref as dRef, push, onValue } from "https://gstatic.com";
+        import { getStorage, ref as sRef, uploadBytes, getDownloadURL } from "https://gstatic.com";
+
+        // আপনার প্রজেক্টের আসল ফায়ারবেস কনফিগারেশন
+        const firebaseConfig = {
+          apiKey: "AIzaSyAc3tKQhRvK_re45VnDkRYPHY4OaYxHmpE",
+          authDomain: "://firebaseapp.com",
+          databaseURL: "https://abidur-social-gallery-default-rtdb.firebaseio.com",
+          projectId: "abidur-social-gallery",
+          storageBucket: "abidur-social-gallery.firebasestorage.app",
+          messagingSenderId: "178553332132",
+          appId: "1:178553332132:web:7a1c432a27dec45bef6131",
+          measurementId: "G-SEMSVTX21D"
+        };
+
+        // ফায়ারবেস ইনিশিয়ালাইজ করা
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const storage = getStorage(app);
+
+        // HTML এলিমেন্ট ধরা
+        const fileChooser = document.getElementById('fileChooser');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const statusDiv = document.getElementById('status');
+        const galleryContainer = document.getElementById('galleryContainer');
+
+        // আপলোড বাটন ক্লিক হ্যান্ডলার
+        uploadBtn.addEventListener('click', () => {
+            const file = fileChooser.files[0];
+            if (!file) {
+                alert("দয়া করে প্রথমে একটি ফাইল সিলেক্ট করুন!");
+                return;
+            }
+
+            // ফাইলের ইউনিক নাম তৈরি করা
+            const fileRef = sRef(storage, 'gallery/' + Date.now() + '_' + file.name);
+            
+            uploadBtn.disabled = true;
+            statusDiv.innerText = "আপলোড হচ্ছে... দয়া করে অপেক্ষা করুন।";
+
+            // ১. Firebase Storage-এ ফাইল আপলোড করা
+            uploadBytes(fileRef, file).then((snapshot) => {
+                // ২. ফাইলের অনলাইন লিংক (URL) নেওয়া
+                getDownloadURL(snapshot.ref).then((downloadURL) => {
+                    
+                    // ৩. লিংক এবং ফাইলের টাইপ Realtime Database-এ সেভ করা
+                    const databaseRef = dRef(database, 'my_gallery');
+                    push(databaseRef, {
+                        fileUrl: downloadURL,
+                        fileType: file.type,
+                        uploadedAt: Date.now()
+                    }).then(() => {
+                        statusDiv.innerText = "সফলভাবে আপলোড সম্পন্ন হয়েছে! 🎉";
+                        fileChooser.value = ''; // ইনপুট ক্লিয়ার করা
+                        uploadBtn.disabled = false;
+                    });
+                });
+            }).catch((error) => {
+                console.error(error);
+                statusDiv.innerText = "আপলোড ব্যর্থ হয়েছে। রুলস চেক করুন বা আবার চেষ্টা করুন।";
+                uploadBtn.disabled = false;
+            });
+        });
+
+        // ৪. ডাটাবেস থেকে ডেটা এনে রিয়েল-টাইমে গ্যালারিতে দেখানো
+        const dbGalleryRef = dRef(database, 'my_gallery');
+        onValue(dbGalleryRef, (snapshot) => {
+            galleryContainer.innerHTML = ''; // আগের ভিউ খালি করা
+            if (snapshot.exists()) {
+                const data = snapshot.val();
+                // লুপ চালিয়ে প্রতিটি ফাইল স্ক্রিনে রেন্ডার করা
+                Object.values(data).reverse().forEach(item => {
+                    const mediaCard = document.createElement('div');
+                    mediaCard.className = 'media-item';
+
+                    if (item.fileType.startsWith('image/')) {
+                        mediaCard.innerHTML = `<img src="${item.fileUrl}" alt="Uploaded Image">`;
+                    } else if (item.fileType.startsWith('video/')) {
+                        mediaCard.innerHTML = `<video src="${item.fileUrl}" controls></video>`;
+                    } else if (item.fileType.startsWith('audio/')) {
+                        mediaCard.innerHTML = `<audio src="${item.fileUrl}" controls></audio>`;
+                    }
+
+                    galleryContainer.appendChild(mediaCard);
+                });
+            } else {
+                galleryContainer.innerHTML = '<p>গ্যালারিতে কোনো ফাইল নেই।</p>';
+            }
+        });
+    </script>
+</body>
+</html>
